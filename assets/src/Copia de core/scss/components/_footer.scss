@@ -1,0 +1,188 @@
+.content-footer1{
+	background-color: $scarlet;
+	float:left;
+	height: 180px;
+	position: relative;
+	.footer-menu{
+		margin: 135px auto 0;
+		li{
+			float: left;
+			font-family: $ubuntu;
+			font-size: 16px;
+			padding: 0 45px;
+			a{
+				color: $white;
+			}
+		}
+	}
+	@include for-tablet-down{
+		display: none;
+	}
+}
+.content-footer2{
+	background: url(../../images/banner-pse.jpg) center top no-repeat;
+	background-size: cover;
+	float: left;
+	height: 300px;
+	position: relative;
+	h1, p{
+		color: $white;
+		float: left;
+		position: relative;
+		text-align: left;
+		width: 100%;
+	}
+	h1{
+		font-family: $ubuntu;
+		font-size: 40px;
+		font-weight: bold;
+		@media screen and (max-width: 425px){
+			font-size: 32px;
+			text-align: center;
+		}
+	}
+	p{
+		font-family: $titillium;
+		font-size: 20px;
+		@media screen and (max-width: 425px){
+			font-size: 18px!important;
+			text-align: center;
+		}
+	}
+	.con-ban{
+		padding-top: 50px;
+		.btn{
+			float: left;
+			@media screen and (max-width: 425px){
+				float: none;
+			}
+		}
+		@media screen and (max-width: 425px){
+			padding: 10px 5px;
+		}
+	}
+	.logo-pse{
+		float: right;
+		margin: 10px;
+		img{
+			width: 130px;
+			@media screen and (max-width: 375px){
+				width: 80px;
+			}
+		}
+	}
+}
+.content-footer3{
+	float: left;
+	padding: 26px 0 5px;
+	position: relative;
+	.redes, .tel{
+		margin: 40px 0;
+		text-align: left;
+		@include for-tablet-down{
+			text-align: center;
+		}	
+		p{
+			color: $black;
+			font-family: $titillium;
+			font-size: 18px;
+		}
+		ul{
+			li{
+				float: left;
+				margin: 0 15px;
+				&.face{
+					margin-left: 0;
+	        img{
+	          margin: 12px 0;
+	          width: 10px;  
+	        }
+	      }
+	      &.linkedin{
+	        img{
+	          height: 22px;
+	          margin: 12px 0;
+	          width: 23px;
+	        }
+	      }
+	      &.instagram{
+	        img{
+	          height: 23px;
+	          margin: 12px 0;
+	          width: 23px;
+	        }
+	      }
+	      &.youtube{
+	        img{
+	          margin: 13px 0;
+	          width: 29px;
+	        }
+	      }
+	      &.buenamesa{
+	        img{
+	          height: 22px;
+	          margin: 12px 0;
+	          width: 31px;
+	        }
+	      }
+			}
+			@include for-tablet-down{
+				max-width: 320px;
+				margin: 0 auto;
+				position: relative;
+				float: left;
+				left: 50%;
+				transform: translate(-50%);
+				li{
+					margin: 0 20px;
+				}
+			}
+		}
+	}
+	.logo{
+		img{
+			width: 128px;
+		}
+	}
+	.tel{
+		text-align: right;
+		h1{
+			color: $black;
+			font-family: $titillium;
+			font-size: 36px;
+			font-weight: bold;
+		}
+		@include for-tablet-down{
+			text-align: center;
+		}
+	}
+}
+.legal {
+	float: left;
+	width: 100%;
+	p, a{
+		color: $black;
+		font-family: $titillium;
+		font-size: 12px;
+	}
+	.left{
+		float: left;
+		text-align: left;
+		@include for-tablet-down{
+			text-align: center;
+			width: 100%;
+		}
+	}
+	.right{
+		float: right;
+		text-align: right;
+		a{
+			text-decoration: underline;
+		}
+		@include for-tablet-down{
+			margin: 10px auto;
+			text-align: center;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+ol,
+ul {
+  list-style: none;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+h1,h2,h3,h4{
+  font-family: $ubuntu;
+  line-height: normal;
+}
+p{
+  font-family: $titillium;
+}
+body {
+  background: $white;
+  font-size: 16px;
+  line-height: 1;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+picture img, img{
+  width: 100%;
+  height: auto;
+}
+%reg-width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+//tamaños fuentes
+.fs-16{
+  font-size: 16px!important;
+}
+//posiciones
+.absolute{
+  position: absolute;
+}
+.no-bottom{
+  margin-bottom: 0!important;
+}
+.left{
+  float: left!important;
+}
+.no-float{
+  float: none!important;
+}
+//titles
+.main-title{
+  color: $black;
+  font-family: $ubuntu, sans-serif;
+  font-size: 43px;
+  font-weight: $bold;
+  margin: 50px auto 20px;
+}
+.txt-left{
+  text-align: left;
+}
+.under-title{
+  color: $black;
+  float: none!important;
+  font-family: $ubuntu, sans-serif;
+  font-size: 24px;
+  font-weight: $bold;
+  line-height: normal;
+  margin: 0 auto!important;
+  position: relative;
+  &:before{
+    content: "";
+    background: $black;
+    bottom: -7px;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+//border
+.white-border{
+  border: solid 2px $white;
+}
+.gray-border{
+  border: solid 2px $brown-gray;
+}
+.brown-gray{
+  color: $brown-gray!important;
+}
+//buttons
+.btn{
+  display: inline-block;
+  float: left;
+  margin: 8px;
+  text-align: center;
+  a, button{
+    @include rounded(23px, 23px, 23px, 23px);
+    @include animado(.2s);
+    float: left;
+    font-family: $titillium, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px 0;
+    padding: 13px 45px;
+    text-decoration: none;
+    &:hover{
+      @include animado(.2s);
+    }
+  }
+  &.big-button{
+    a, button{
+      font-size: 25px;
+    }
+  }
+}
+.btn-white{
+  a{
+    background: $white;
+    color: $deep-red;
+  }
+}
+.btn-red{
+  a, button{
+    background: $deep-red;
+    color: $white;
+  }
+}
+.btn-red-line{
+  a, button{
+    background: $white;
+    border: 1px solid $deep-red;
+    color: $deep-red;
+  }
+}
+.btn-gray{
+  a, button{
+    background: $white;
+    border: 1px solid $brown-gray;
+    color: $brown-gray;
+    &:hover{
+      border: 1px solid $scarlet;
+      color: $scarlet;
+    }
+  }
+}

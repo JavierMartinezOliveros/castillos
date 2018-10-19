@@ -1,0 +1,89 @@
+.client-carrusel{
+	margin: 30px auto;
+}
+.client{
+  margin: 20px auto;
+  min-height: 205px;
+  min-width: 205px;
+  overflow: hidden;
+  img{
+  	margin: 45px auto 0;
+  	width: 160px;
+  }
+  &.dominos{
+  	img{
+  		margin-top: 0;
+  		width: 140px;
+  	}
+  }
+  &.vertical{
+    img{
+  		margin-top: 0;
+  		width: 140px;
+    }
+  }
+  &.horizontal{
+    img{
+  		margin-top: 50px;
+  		width: 100%;      
+    }
+  }
+}
+.fund-carrusel{
+  float: left;
+  margin: 50px auto;
+}
+.video-carrusel{
+  float: left;
+  position: relative;
+  margin-bottom: 70px;
+  .round-img{
+    float: left;
+    height: 130px;
+    margin: 20px auto;
+    width: 145px;
+    a{
+      float: left;
+      img {
+        border-radius: 50%;
+        height: 140px;
+        width: 135px;
+      }
+      p{
+        color: $black;
+        font-size: 22px;
+        font-weight: 600;
+        margin: 25px 0;  
+      }
+      &:hover{
+        @include animado(.2s);
+        transform: scale(1.05);
+        p{
+          color: $deep-red;
+        }
+      }
+    }
+  }
+}
+.v-carousel{
+  .bx-wrapper{
+    img{
+      margin: 0 auto;
+      max-width: 1095px;
+      width: 100%;
+    }
+    .bx-prev, .bx-next {
+      background: url(../../images/arrow-red-left.svg);
+      background-size: contain;
+      height: 22px;
+      width: 32px;
+    } 
+    .bx-prev{
+      left: -60px;
+    }
+    .bx-next {
+      right: -60px;
+      transform: rotate(180deg);
+    } 
+  }
+}

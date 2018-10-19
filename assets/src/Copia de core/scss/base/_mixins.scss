@@ -1,0 +1,47 @@
+//Media quieries
+@mixin for-tablet-down {
+@media (max-width: $tablet) { @content; }
+}
+@mixin for-tablet-up {
+@media (min-width: $phone-max) { @content; }
+}
+@mixin for-desktop-up {
+@media (min-width: $desktop) { @content; }
+} 
+@mixin for-desktop-big {
+    @media (min-width: $desktop-up) { @content; }
+    } 
+@mixin animado($ani){
+    transition: all $ani ease-out;
+}
+@mixin rounded($topleft, $topright, $bottomright, $bottomleft) {
+border-top-left-radius: $topleft;
+border-top-right-radius: $topright;
+border-bottom-right-radius: $bottomright;
+border-bottom-left-radius: $bottomleft;
+}
+@mixin sombra($left, $top, $radius, $spread, $color) {
+box-shadow: $left $top $radius $spread $color;
+}
+@mixin text_shadow($left, $top, $radius, $color) {
+text-shadow: $left $top $radius $color;
+}
+@mixin trasformx($trans){
+transform: translateX($trans);
+}
+@mixin trans_delay($del){
+transition-delay: ($del);
+}
+//mixins para banners
+@mixin con-ban($padding, $posicion, $width) {
+padding: $padding;
+position: $posicion;
+width: $width;
+}
+@mixin aling-con-banner( $left, $bottom, $aling, $top, $right){
+left: $left;
+bottom: $bottom;
+text-align: $aling;
+top: $top;
+right: $right;
+}

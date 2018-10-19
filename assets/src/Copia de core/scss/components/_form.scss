@@ -1,0 +1,529 @@
+.form{
+	margin: 20px auto;
+	.main-title{
+		float: left;
+		width: 50%;
+	}  
+}
+form, .cont-card{
+  .btn{
+    button{
+      padding: 8px 45px;
+    }
+  }
+}
+.contact{
+  margin: 50px auto;
+	padding: 20px 0;
+	.wrrp_campo {
+    transition: all .2s ease-out 0s;
+    border-bottom: solid 1px $gray;
+    float: left;
+    font-family: $ubuntu, sans-serif;
+    margin: 20px 0;
+    padding-bottom: 5px;
+    position: relative;
+    width: calc(100% - 23px);
+    &.active {
+      border-bottom: solid 1px $black;
+      &.red {
+        border-bottom: solid 1px $deep-red;
+      }
+      &.disabled {
+        border-bottom: solid 1px $gray;
+        input[type="text"],
+        .wrrp_select select {
+          color: $gray;
+        }
+      }
+      label {
+      	color: $deep-red;
+        font-size: 16px;
+        font-weight: bold;
+        transform: translateY(-130%);
+      }
+    }
+    &.errorcampo {
+      border-bottom: solid 1px $deep-red;
+      position: relative;
+      margin-bottom: 35px;
+      .alerta_errorcampo {
+        display: block;
+      }
+    }
+    &.without_icon label {
+      left: 0;
+    }
+    .alerta_errorcampo {
+      left: 0;
+      font-size: .62rem;
+      display: none;
+      color: $deep-red;
+      line-height: 12px;
+      padding: 0;
+      top: 42px;
+      position: absolute;
+      text-align: left;
+    }
+    p {
+      float: left;
+      font-size: 13px;
+      line-height: 18px;
+      padding-left: 10px;
+      width: 100%;
+    }
+    span {
+      margin-bottom: 0;
+      font-size: 10px;
+      left: 0;
+      line-height: 10px;
+      padding-left: 10px;
+      position: absolute;
+      top: -12px;
+    }
+    input {
+      &, select {
+      	color: $black;
+        position: relative;
+        font-family: $titillium, sans-serif;
+        background: transparent;
+        border: 0;
+        line-height: normal;
+        width: 100%;
+      }
+      &:disabled {
+        background: transparent;
+      }
+      &[type="text"] {
+        color: $black;
+        float: left;
+        padding-left: 10px;
+        width: 100%;
+      }
+      &[type="number"] {
+        width: calc(100% + 20px);
+      }
+      &:autofill {
+        box-shadow: 0 0 0 30px $gray inset;
+      }
+      &:invalid {
+        box-shadow: none;
+      }
+    }
+    .hiden{
+    	opacity: 0;
+    }
+    textarea{
+    	height: 180px;
+    	width: 100%;
+    }
+    select {
+      width: 100%;
+      appearance: none;
+      color: $black;
+      font-size: 18px;
+      padding: 4px 8px;
+      border: none;
+      background-color: transparent;
+      outline: none;
+    }
+    label {
+      font-weight: 400;
+      color: $gray;
+      cursor: text;
+      font-size: 18px;
+      left: 0;
+      position: absolute;
+      text-align: initial;
+      top: 0;
+      width: fit-content;
+      transition: all .2s ease-out 0s;
+    }
+    &.no-animation {
+      transition: none;
+    }
+  }
+}
+.cont-check{
+	float: left;
+  margin-bottom: 20px;
+	position: relative;
+}
+.container-checkbox{
+	float: left;
+	font-family: $titillium, sans-serif;
+	font-size: 16px;
+	margin: 10px auto;
+	padding: 0 35px;
+	position: relative;
+  text-align: left;
+  width: 100%;
+	input {
+		cursor: pointer;
+		opacity: 0;
+    position: absolute;
+	}
+	.checkmark {
+		border: 2px solid $black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $white;
+    &:after{
+    	content: "";
+	    position: absolute;
+	    display: none;
+    }
+  }
+  a{
+    color: $black;
+    text-decoration: underline;
+  }
+}
+.container-checkbox:hover input ~ .checkmark {
+    background-color: $white;
+}
+.container-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+.container-checkbox .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid $scarlet;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.comunicate{
+  margin: 30px auto;
+  text-align: center;
+  h2{
+    color: $brown-gray;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  h1{
+    color: $black;
+    font-size: 70px;
+    font-weight: bold;
+    float: left;
+    left: 50%;
+    padding-left: 70px;
+    position: relative;
+    transform: translate(-50%);
+    &:before{
+      content: "";
+      background: url(../../images/rep/ico-phone.png)top center no-repeat;
+      background-size: contain;
+      height: 70px;
+      left: 0;
+      position: absolute;
+      top: 5;
+      width: 60px;
+    }
+  }
+}
+.wrap-drop {
+  background: $white;
+  border-bottom: solid 1px $gray;
+  color: $brown-gray;
+  cursor: pointer;
+  float: left;
+  font-family: $titillium;
+  font-size: 16px;
+  margin:23px auto;
+  padding:1rem 0;
+  position:relative;
+  text-align: left;
+  width: calc(100% - 23px);
+  z-index:3;
+  &:after{
+    border-top: 2px solid $scarlet;
+    border-right: 2px solid $scarlet;
+    content:"";
+    display: inline-block;
+    margin-top: 4px;
+    position:absolute;
+    right:1rem;
+    top:13px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(135deg);
+    @include animado(.2s);
+  }
+  .drop{
+    @include animado(.2s);
+    background:$white;
+    box-shadow:3px 3px 3px rgba(0,0,0,.2);
+    display:none;
+    left:0;
+    list-style:none;
+    margin-top:0;
+    opacity:0;
+    padding-left:0;
+    pointer-events:none;
+    position:absolute;
+    right:0;
+    top:100%;
+    z-index:2;
+    li{
+      a{
+        color: $brown-gray;
+        display:block;
+        padding:1rem;
+        text-decoration:none;
+        &:hover{
+          color: $gray;
+        }
+      }
+    }
+  }
+  span{
+    color: $brown-gray;
+  }
+  &.active{
+    .drop{
+      display:block;
+      opacity:1;
+      pointer-events:auto;
+    }
+    &:after{
+      transform: rotate(-45deg);
+    }
+  }
+}           
+.large-10.contact{
+  margin: 0 auto 40px;
+  float: none;
+}
+.comments__form-text{
+  float: left;
+}
+.comments__form-field {
+  float: left;
+  position: relative;
+  width: calc(100% - 23px);
+}
+.comments__form-label {
+  display: block;
+  color: $scarlet;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font: 700 16px $titillium;
+  cursor: text;
+  text-align: left;
+  pointer-events: none;
+}
+
+.comments__form-label-text {
+  display: block;
+  transform: translateY(100%);
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+}
+.comments__form-input:focus::-webkit-input-placeholder {
+   color: transparent;
+}
+.comments__form-input:focus + .comments__form-label .comments__form-label-text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.comments__form-label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #111;
+  bottom: 1em;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.comments__form-input:focus + .comments__form-label::after {
+  transform: scaleX(1);
+}
+
+.comments__form-input {
+  position: relative;
+  width: 100%;
+  padding: 1em 0;
+  border: 0;
+  outline: 0;
+  margin: 1em 0;
+  border-bottom: 1px solid $gray;
+  vertical-align: bottom;
+  font: 400 16px $titillium;
+}
+
+.comments__form-textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 168px;
+}
+
+.comments__form-submit {
+  padding: 0.5em;
+  margin: 1em 0;
+  background: none;
+  font: 400 20px $titillium;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  opacity: 0.25;
+}
+
+.comments__form-submit:hover {
+  opacity: 1;
+}
+.form-tab{
+  float: right;
+}
+//captcha
+.hide{
+  display: none;
+}
+.submit__generated {
+  display: inline-block; 
+  span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    vertical-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    font-family: $titillium;
+    font-size: 16px;
+    color: $black;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;  
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+  }
+  &.valid:after,
+  &.unvalid:after {
+    font-family: FontAwesome;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  &.valid {
+    &:after {
+      content: "\f00c";
+      color: #2ecc71;
+    }
+    .submit__input {
+      border: 1px solid #2ecc71;
+      color: #2ecc71 !important;
+    }
+  }
+  &.unvalid {
+    &:after {
+      content: "X";
+      color: #e74c3c;
+    }
+    .submit__input {
+      border: 1px solid #e74c3c;
+      color: #e74c3c;
+    }
+  }
+  .submit__input {
+    position: relative;
+    outline: 0;
+    height: 35px;
+    width: 35px;
+    border-radius: 4px;
+    border: 1px solid $black;
+    color: #42A0DD;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    top: -2px;
+  }
+}
+.submit__control{
+  float: left;
+  position: relative;
+  width: 220px;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+  h3{
+    margin: 10px auto;
+  }
+}
+i.fa-sync {
+  margin: 4px 0 0px 5px;
+  padding: 5px;
+  font-size: 18px;
+  color: rgba(0,0,0,0.2);
+  cursor: pointer;
+  transform-origin: center center;
+  transition: transform 0.2s ease-out, color 0.2s ease-out;
+  &:hover {
+    color: rgba(0,0,0,0.4);
+    transform: rotate(180deg);
+  }
+}
+
+span.submit__error,
+span.submit__error--empty {
+  color: #e74c3c;
+  font-family: $titillium;
+  left: 0;
+  position: absolute;
+  top: 75px;
+  margin-left: 120px;
+}
+
+.submit {
+  display: block;
+  margin: 50px 0;
+  letter-spacing: 1px;
+  outline: none;
+  position: relative;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  &:active,
+  &.enter-press,
+  &.overlay {
+    margin: 55px 0 46px 0;
+    box-shadow: none;
+  }
+}
+	.submit__overlay {
+		height: 50px;
+		width: 240px;
+		background-color: rgba(255,255,255,0.8);
+		position: absolute;
+		margin-top: 54px;
+		margin-left: 0px;
+	}
+.low-opa { opacity: 0.4; }
+.fadeOut {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.fadeIn {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+}
+.form-fields,
+.form-success {
+  transition: all 0.2s ease-out;
+}
+.form-success {
+  opacity: 0;
+  transform: translateY(-10px);
+  margin-top: 20px;
+}

@@ -1,0 +1,445 @@
+.container-tabs{
+	display: inline-block;
+	margin: 30px 0;
+	position: relative;
+	width: 100%;
+}
+.tabs-controls{
+	text-align: center;
+	.txt-left{
+		@include for-tablet-down{
+				text-align: center;
+		}
+	}
+	.tab-button{
+		a{
+				float: left;
+				@include for-tablet-down{
+						width: 100%;
+				}
+		}
+	}
+}
+.tabs-btns, .tab-button{
+	cursor: pointer;
+	display: inline-block;
+	height: 65px;
+	position: relative;
+	vertical-align: top;
+	@include animado( .2s);
+	h2, a{
+		color: $brown-gray;
+		font-family: $ubuntu, sans-serif;
+		font-size: 24px;
+		font-weight: bold;
+		padding: 25px 20px;
+		&:before{
+			content: "";
+			position: absolute;
+			width: 0;
+			left: -2%;
+			bottom: -4px;
+			height: 3px;
+			background-color: $scarlet;
+			@include animado( .3s);
+		}
+	}
+	&:hover, &.active{
+		h2, a{
+			color: $black;
+			&:before{
+				@include animado( .2s);
+				left: 50%;
+				transform: translate(-50%);
+				width: 84%;
+			}
+		}
+	}
+}
+.tab{
+  display: none;
+}
+.cont-tabs{
+	display: inline-block;
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+	.btn{
+		float: none;
+		margin: -25px auto;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%);
+	}
+}	
+.big-wrap {
+	background: url(../../images/fondo-mesa.png) center bottom no-repeat;
+	background-size: cover;
+	display: none;
+	height: 600px;
+	width: 100%;
+	.banner-tap{
+		float: left;
+		width: 100%;
+		.bx-wrapper{
+			img{
+				margin: 0 auto;
+				min-height: 340px;
+				width: auto;
+			}
+			.bx-prev, .bx-next {
+				background: url(../../images/arrow-red-left.svg);
+				background-size: contain;
+				height: 22px;
+				width: 32px;
+			}	
+			.bx-prev{
+				left: 70px;
+			}
+			.bx-next {
+				right: 70px;
+				transform: rotate(180deg);
+			}	
+		}
+		.con-mid{
+			background: url(../../images/yellow-bg.png) center top no-repeat;
+			margin: 47px auto;
+			text-align: center;
+			z-index: -1;
+			h3{
+				color: $white;
+				font-family: $sweet;
+				font-size: 90px;
+				padding: 40px 0 30px;
+			}
+		}
+		picture{
+			float: left;
+			margin: 180px auto 0;
+			width: 100%;
+		}
+	}
+}
+.tabs-beneficios{
+	margin: -160px auto 30px;
+	.titulo{
+		h1{
+			color: $black;
+			font-size: 76px;
+			font-weight: bold;
+			text-align: left;
+			@include for-tablet-down{
+					font-size: 48px;
+					text-align: center;
+			}
+		}
+	}
+    .tabs-controls{
+        @include animado( .2s);
+        background-color: $white;
+        box-shadow: 0 11px 30px 0 rgba(141, 151, 158, 0.2);
+        float: left;
+        margin: 0 auto;
+        max-width: 980px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        z-index: $min-index + 4;
+        .tabs-btns {
+            background: $white;
+            height: 260px;
+            img{
+                max-width: 250px;
+                @include for-tablet-down{
+                    max-width: 180px;
+                }
+            }
+            &:hover, &.active{
+                @include animado( .2s);
+                box-shadow: 0 12px 30px 10px rgba(0, 0, 0, 0.2);
+                border-bottom: 2px solid $scarlet;
+                transform: scale(1.04);
+                z-index: $min-index + 5;
+            }
+            @include for-tablet-down{
+                height: 200px;
+            }
+        }	
+    }
+    .cont-tabs{
+        margin: 80px auto;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    @include for-tablet-down{
+        margin-top: -50px;
+        padding: 0 10px;
+    }
+    @media screen and (max-width: 767px){
+        display: none;
+    }
+}
+.red-frame{
+    border: 2px solid $scarlet;
+    display: inline-block;
+    margin: 30px auto;
+    padding: 35px 50px;
+    p{
+        color: $black;
+        font-size: 28px;
+        font-style: italic;
+        text-align: left;
+        @include for-tablet-down{
+            font-size: 22px;
+        }
+    }
+}
+.info-beneficios{
+    margin: 30px auto;
+    p{
+        color: $gray-2;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: left;
+    }
+    ul{
+        list-style-type: square; 
+        margin: 30px 20px;
+        li{
+            color: $gray-2;
+            font-family: $titillium;
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: left;
+        }
+    }
+}
+.cursos{
+    .clase{
+        float: left;
+        padding: 25px 50px;
+        p{
+            color: $deep-red;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 30px auto;
+        }
+        img{
+            height: 79px;
+            width: auto;
+        }
+    }
+}
+.mas-info{
+    background: $white;
+    border-top-left-radius: 25px;
+    box-shadow: 0 0 20px 0 rgba(141, 151, 158, 0.2);
+    display: inline-block;
+    margin: 20px auto;
+    .head{
+        background: $deep-red;
+        border-top-left-radius: 25px;
+        height: 135px;
+        position: relative;
+        h2{
+            color: $white;
+            font-size: 29px;
+            font-weight: bold;
+            padding: 32px 0 32px 32px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        .baker{
+            bottom: 0;
+            position: absolute;
+            right: 0;
+        }
+    }
+    .contact{
+        padding: 20px 38px;
+        .wrrp_campo{
+            border-bottom: solid 1px #979797;
+            width: 100%;
+            label{
+                font-size: 16px;
+            }
+        }
+        .btn{
+            float: left;
+            margin: 30px auto;
+        }
+        @media screen and (max-width:767px){
+            margin: 20px auto;
+            .btn{
+                float: none;
+            }	
+        }
+    }
+}
+.calendar-frame{
+    border: 2px solid $scarlet;
+    box-shadow: 0 0 20px 0 rgba(141, 151, 158, 0.2);
+    display: inline-block;
+    margin: 30px auto;
+    padding: 35px 50px;
+    img{
+        height: 61px;
+        width: 56px;
+    }
+    a{
+        color: $scarlet;
+        font-family: $titillium;
+        font-size: 28px;
+        font-weight: bold;
+        float: left;
+        padding-left: 70px;
+        position: relative;
+        text-align: left;
+        &:before{
+            content:"";
+            background: url(../../images/calendar.svg)top center no-repeat;
+            background-size: contain;
+            height: 61px;
+            left: 0;
+            position: absolute;
+            top: -4px;
+            width: 56px;  
+            @include for-tablet-down{
+                top: -18px;
+            }
+        }
+    }
+}
+.tabs-recipes{
+    .tabs-controls{
+        float: left;
+        margin: 0 4%;
+        position: relative;
+        width: 92%;
+    }
+    .tabs-btns{
+        &:hover, &.active{
+            h2, a{
+                color: $black;
+                &:before{
+                    width: 50%;
+                }
+            }
+        }
+    }
+    .big-wrap{
+        background: transparent;
+        .wrapper-card{
+            margin-bottom: 25px;
+        }
+    }
+}
+//paginador
+.tabs-recipes{
+    .cont-tabs{
+        margin: 30px auto;
+    }
+    .bx-wrapper {
+        .bx-controls{
+            position: relative;
+            .bx-prev, .bx-next{
+                color: $black;
+                font-family: $titillium;
+                font-size: 24px;
+                font-weight: normal;
+                right: 240px;
+                text-indent:0;
+                top: 40px;
+                width: 70px;
+            }
+            .bx-prev{
+                left: 38%;
+            }
+            .bx-next{
+                right: 455px;
+            }
+        }
+        .bx-pager {
+            position: relative;
+            &.bx-default-pager {
+                a{
+                    background: transparent;
+                    color: $black;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-family: $titillium;
+                    font-size: 24px;
+                    font-weight: normal;
+                    text-indent:0;
+                    padding: 5px 10px;
+                    &.active{
+                        background: transparent;
+                        color: $scarlet;
+                    }
+                }
+            }	
+        }
+    }	
+}
+
+//dropdown tabs
+.acordeon{
+    display: none;
+    @media screen and (max-width: 767px){
+        display: block;
+    }
+}
+.drop-tab{
+    background: $white;
+    float: left;
+    padding: 0 20px;
+    width: 100%;
+    .dropdown-btn{
+        border-bottom: 2px solid $gray;
+        text-align: left;
+        width: 100%;
+        &.is-active{
+            border-bottom: 2px solid $scarlet;
+        }
+        h3{
+            display: inline-block;
+            color: $black;
+            font-size: 24px;
+            font-weight: 600;
+            padding: 20px 0;
+            vertical-align: middle;
+            @media screen and (max-width: 320px){
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+        img{
+            display: inline-block;
+            padding: 0 5px;
+            vertical-align: middle;
+            width: 70px;
+            @media screen and (max-width: 320px){
+                display: block;
+                margin: 10px auto;
+            }
+        }
+    }
+    .dropdown{
+        .titulo h1 {
+            color: $black;
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+    .dropdown-content{
+        display: none;
+        .cursos{
+            .clase{
+                padding: 25px 5px;
+            }
+        }
+    }
+}

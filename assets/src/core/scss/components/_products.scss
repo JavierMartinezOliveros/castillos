@@ -1,0 +1,248 @@
+.linea{
+  .wrapper-card{
+    .full-img{
+      height: 300px;
+      margin: 0 auto;
+      max-width: 176px;
+      width: 300px;
+    }
+    .cont-card{
+      text-align: center;
+      h3{
+        height: 90px;
+      }
+      .btn{
+        float: none;
+        width: auto;
+      }
+    }
+  }
+}
+.productos-rel{
+  .cont-card{
+    text-align: center;
+    h3{
+      font-size: 35px;
+      font-weight: normal;
+    }
+    .btn{
+      float: none;
+    }
+  }
+}
+.product-desc{
+  .titulo{
+    color: $black;
+    font-size: 52px;
+    font-weight: bold;
+    text-align: left;
+    @media screen and (max-width: 425px){
+      font-size: 42px;
+      text-align: center;
+    }
+  }
+  .red-frame{
+    padding: 19px 20px;
+    p{
+      font-size: 18px;
+    }
+    @media screen and (max-width: 425px){
+      float: none;
+    }
+  }
+  .product-text{
+    float: left;
+    padding-right: 10px;
+    p{
+      color: $brown-gray;
+      font-size: 24px;
+      line-height: 1.4;
+      text-align: left;
+      @media screen and (max-width: 425px){
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+    .btn{
+      a{
+        @media screen and (max-width: 425px){
+          font-size: 18px;
+        }
+      }
+      @media screen and (max-width: 425px){
+        float: none;
+      }
+    }
+  }
+  @include for-tablet-down{
+    padding: 0 10px;
+  }
+  .img-product{
+    @media screen and (max-width: 425px){
+      margin: 20% auto;
+    }
+  }
+}
+.info-product{
+  text-align: left;
+  h3{
+    color: $deep-red;
+    font-size: 24px;
+    font-weight: bold;
+    height: 30px;
+    margin: 0 auto 20px;
+    position: relative;
+    text-align: left;
+    &:after{
+      content: "";
+      background: $deep-red;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      top: 100%;
+      width: 80px;
+    }
+  }
+  p{
+    font-size: 16px;
+    line-height: normal;
+    margin: 15px 0;
+    text-align: justify;
+    &:nth-child(1) {
+      margin: 0;
+    }
+  }
+  div{
+    margin-bottom: 30px;
+  }
+}
+.new-product{
+	&.big-wrap{
+    background: url(../../images/fondo-mesa.png)center top no-repeat;
+    background-size: 100% 600px;
+		display: block;
+    float: left;
+    height: auto;
+    @media screen and (max-width: 425px){
+      background: transparent;
+    }
+	}
+	.full-img{
+    float: left;
+		margin: 100px 0;
+		max-width: 270px;
+    width: 100%;
+    @media screen and (max-width: 425px){
+      float: none;
+      margin: 50px auto;
+    }
+	}
+	.pro-left{
+		img{
+			float: left;
+      margin-left: 50px;
+      @media screen and (max-width: 425px){
+        float: none;
+        margin: 0 auto;
+      }
+    }
+	}
+	.pro-right{
+		.full-img{
+      float: right;
+      @media screen and (max-width: 425px){
+        float: none;
+        margin: 50px auto;
+      }
+		}
+		img{
+			float: right;
+      margin-right: 50px;
+      @media screen and (max-width: 425px){
+        float: none;
+        margin: 0 auto;
+      }
+		}
+	}
+	.titulo{
+		h1{
+			font-size: 44px;
+		}
+	}
+	&.product-desc{
+    margin: 10px auto;
+		.red-frame{
+			width: auto;
+			p{
+        font-size: 22px;
+        line-height: 1;
+        margin: 0;
+			}
+    }
+    p{
+      font-size: 18px;
+      line-height: normal;
+      margin: 20px 0;
+    }
+  }
+  &.right{
+    float: right;
+    .titulo{
+      text-align: right;
+      @media screen and (max-width: 425px){
+        text-align: center;
+      }
+    }
+    .red-frame{
+      float: right;
+      @media screen and (max-width: 425px){
+        float: none;
+      }
+    }
+    .product-text{
+      float: right;
+      p{
+        text-align: right;
+        @media screen and (max-width: 425px){
+          text-align: center;
+        }
+      }
+      .btn{
+        float: right;
+        @media screen and (max-width: 425px){
+          float: none;
+        }
+      }
+    }
+  }
+}
+.months-chef{
+  &.big-wrap{
+    display: block;
+    float: left;
+    height: 550px;
+  }
+  .full-img{
+    img{
+      width: auto;
+    }   
+  }
+  .pro-left{
+    margin: 70px auto;
+    padding: 30px 60px;
+    text-align: left;
+    h1{
+      color: $black;
+      font-size: 53px;
+      font-weight: bold;
+      text-align: left;
+    }
+    p{
+      color: $black;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+      margin: 40px auto;
+    }
+  }
+}

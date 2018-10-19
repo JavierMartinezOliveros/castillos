@@ -1,0 +1,55 @@
+{
+  "name": "prueba_zemoga",
+  "description": "prueba.",
+  "proxy": "http://thumbs-up.co.local",
+  "fonts": {
+    "src": [
+      "src/vendors/fonts/**/**.*"
+    ],
+    "dest": "dist/vendors/fonts/"
+  },
+  "css": {
+    "sync" : "**/*.css",
+    "core": {
+      "watch": "src/core/scss/**/*.scss",
+      "src": [
+        "src/core/scss/main.scss"
+      ],
+      "dest": "dist/core/css"
+    },
+    "admin": {
+      "watch": "src/admin/scss/**/*.scss",
+      "src": [
+        "src/admin/scss/main.scss"
+      ],
+      "dest": "dist/admin/css"
+    },
+    "includePaths": [
+      "./includes/unsemantic/grid.scss"
+    ]
+  },
+  "js": {
+    "core": {
+      "watch": "src/core/js/**/*.js",
+      "src": [
+      "src/core/js/**/*.js"
+      ],
+      "dest": "dist/core/js/",
+      "concat": "main.js"
+    },
+    "admin": {
+      "watch": "src/admin/js/**/*.js",
+      "src": [
+        "src/admin/js/**/*.js"
+      ],
+      "dest": "dist/admin/js/",
+      "concat": "main.js"
+    }
+  },
+  "images": {
+    "src": [
+      "src/images/**/*"
+    ],
+    "dest": "dist/images/"
+  }
+}

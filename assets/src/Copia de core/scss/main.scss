@@ -1,0 +1,24 @@
+// Base libraries
+
+// Base styles
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/mixins';
+
+// Component styles
+@import 'components/general';
+@import 'components/grid';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/banner';
+@import 'components/tabs';
+@import 'components/cards';
+@import 'components/carrusel';
+@import 'components/form';
+@import 'components/products';
+@import 'components/breadcrumb';
+@import 'components/receta';
+@import 'components/notas';
+@import 'components/map';
+@import 'components/modal';

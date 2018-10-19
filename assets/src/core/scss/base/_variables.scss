@@ -1,0 +1,53 @@
+// Base
+
+$black: #4a4a4a;
+$white: #FFFFFF;
+// Primary
+
+$deep-red: #EE0000;
+$scarlet: #D0021B;
+$brown-gray: #A5A5A5;
+$gray: #AEAEAE;
+$gray-2: #9B9B9B;
+$brown-gray-20: transparentize(#A5A5A5, .8);
+$brown-gray-6: transparentize(#A5A5A5, .4);
+$scarlet-40: transparentize(#D0021B, .6);
+$scarlet-80: transparentize(#D0021B, .2);
+$blue_fill:  rgba(35, 70, 109, 0.6);
+
+/*
+Fonts
+*/
+$ubuntu: 'Ubuntu', sans-serif;
+$titillium: 'Titillium Web', sans-serif;
+$sweet: 'sweet_hipsterregular';
+/*
+Typography
+*/
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+/*
+Breakpoints
+*/
+$phone: 425px;
+$phone-max: 688px;
+$tablet: 768px;
+$desktop: 1280px;
+$desktop-up: 1367px;
+/*
+Z indexes
+*/
+$max-index: 200;
+$medium-index: 100;
+$min-index: 1;
+/*
+variables para contenidos de banners
+*/
+$con_ban: 10px, absolute, 100%;
+$con_mid: 0, 5%, center, auto, 0;
+$con_left: 0, 0, left, 0, auto;
+$con_right: auto, 0, left, 30%, 0;
+$con_bot: 50%, 0, center, 65%, 0;
+$con_ban_left: 2%, 0, left, initial, 0;

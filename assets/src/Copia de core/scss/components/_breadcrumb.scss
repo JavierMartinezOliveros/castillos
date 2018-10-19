@@ -1,0 +1,23 @@
+.breadcrumb{
+  text-align: left;
+  ul{
+    li{
+      color: $black;
+      display: inline;
+      font-family: $titillium;
+      font-size: 16px;
+      a{
+        color: $brown-gray;
+        text-decoration: none;
+      }
+    }
+  }
+  @include for-tablet-down{
+    padding: 0 10px;
+  }
+}
+.breadcrumb li+li:before {
+  padding: 6px;
+  color: $brown-gray;
+  content: "/\00a0";
+}

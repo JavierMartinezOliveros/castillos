@@ -1,0 +1,42 @@
+{
+  "name": "tumbs_up",
+  "description": "prueba front-end zemoga",
+  "main": "gulpfile.js",
+  "scripts": {
+    "setup": "npm install",
+    "yarn": "yarn install",
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete",
+    "precommit": "gulp sass_lint && .jshintrc --verbose src/core src/admin"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.4",
+    "babel-cli": "6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "1.6.1",
+    "browser-sync": "^2.23.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-sass-lint": "1.3.4",
+    "gulp-stylelint": "6.0.0",
+    "gulp-uglify": "^3.0.0",
+    "husky": "0.14.3",
+    "jshint": "2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "path": "0.12.7",
+    "stylelint": "8.4.0",
+    "vinyl-source-stream": "2.0.0"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp-imagemin": "^4.1.0",
+    "object-fit-images": "^3.2.4"
+  },
+  "author": "",
+  "license": "ISC"
+}
