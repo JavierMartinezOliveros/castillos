@@ -1,0 +1,23 @@
+# dependencies
+assets/node_modules
+
+# OS Related
+.DS_Store
+.zip
+
+# Sass, lint
+.sass-cache/
+.eslintcache
+
+# Node
+.npm
+package-lock.json
+.yarn-integrity
+yarn.lock
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
